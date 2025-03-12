@@ -1,7 +1,7 @@
 export function GamePage() {
     return (
         <>
-            <h1>GamePage</h1>
+            <h1>Games Center</h1>
         </>
     )
 }

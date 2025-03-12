@@ -6,10 +6,10 @@ export default function NavList() {
     return (
         <List sx={{ display: 'flex', width: '100%' }}>
             <ListItem sx={{ width: '100%', display: 'flex', justifyContent: 'center', borderBottom: '1px solid #0A5EB0' }}>
-                <NavLink to={'/'} className={classes.Link}>
+                <NavLink to={'/home'} className={classes.Link}>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
-                            <Typography variant='h4'>Home</Typography>
+                            <Typography variant='h4'>Scout</Typography>
                         </ListItemText>
                     </ListItemButton>
                 </NavLink>
@@ -18,7 +18,7 @@ export default function NavList() {
                 <NavLink to={'/game'} className={classes.Link}>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText>
-                            <Typography variant='h4'>Game</Typography>
+                            <Typography variant='h4'>Games Center</Typography>
                         </ListItemText>
                     </ListItemButton>
                 </NavLink>
