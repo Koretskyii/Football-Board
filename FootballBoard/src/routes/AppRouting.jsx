@@ -15,7 +15,7 @@ export function AppRouting() {
             <Route index path='/home' element={<HomePage/>}/>
             <Route path='/game' element={<GamePage />} />
             <Route path='/leagueFixtures' element={<LeagueFixtures/>}/>
-            <Route path='/teamFixtures' render={(props) => <TeamFixtures/>}/>
+            <Route path='/teamFixtures/:teamId' element={<TeamFixtures/>}/>
           </Route>
         </Routes>
     </Router>

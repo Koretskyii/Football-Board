@@ -45,7 +45,7 @@ export function HomePage() {
                         <Link 
                         sx={{display: 'flex', flexDirection: 'row', justifyContent: 'left', gap: '2%', width: '100%', textDecoration: 'none'}}
                         bgcolor={el.rank % 2 != 0 ? '#F7F7F7' : 'inherit'} 
-                        href="/teamFixtures?team=${}" color='#3f51b5'>
+                        href={`teamFixtures/${el.team.id}`} color='#3f51b5'>
                         <span>{el.rank}. </span> 
                         <div><img src={el.team.logo} width={'20px'}></img>  {el.team.name}</div>
                         <span>{el.points} pts</span> 
