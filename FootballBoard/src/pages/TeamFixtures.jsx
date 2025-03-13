@@ -1,6 +1,7 @@
 import { useParams } from "react-router"
-import { useFixtures } from "../hooks/useFixtures";
+import { useFixtures } from "../hooks/teams/useFixtures";
 import { List, ListItem } from "@mui/material";
+import { getFormattedDate } from "../utils/getFormattedDate";
 
 export function TeamFixtures() {
     const { teamId } = useParams();
@@ -12,13 +13,7 @@ export function TeamFixtures() {
             {error && {error}}
             {fixtures && fixtures.map(fixture => (
                 <ListItem key={fixture.fixture.id} sx={{display: "flex", flexDirection: 'column', alignItems: 'start'}}>
-                    <div>{new Date(fixture.fixture.date).
-                    toLocaleString({day: "2-digit",
-                                    month: "2-digit",
-                                    year: "numeric",
-                                    hour: "2-digit",
-                                    minute: "2-digit",
-                                    timeZone: "Europe/Kyiv"})}
+                    <div>{getFormattedDate(fixture.fixture.date)}
                     </div>
                     <br />
                     <div>
@@ -26,7 +21,6 @@ export function TeamFixtures() {
                         <span>{fixture.teams.home.name} {fixture.goals.home} - {fixture.goals.away} {fixture.teams.away.name}</span> 
                         <img src={fixture.teams.away.logo} alt="" width={'20px'}/>
                     </div>
-                   
                     <br />
                 </ListItem>
             ))}

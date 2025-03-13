@@ -37,7 +37,6 @@ export function useFixtures(teamID) {
             } finally {
                 setLoading(false);
             }
-            return {}
         };
 
         if (teamID) {
